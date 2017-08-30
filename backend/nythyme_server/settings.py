@@ -25,7 +25,10 @@ SECRET_KEY = 'qfsumr=%d*am_6=y(n=71^c(mth=t(ap=z!xg1b1626=mgnn5v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+        'secret-sands-12024.herokuapp.com',
+        'localhost'
+        ]
 
 
 # Application definition
@@ -110,3 +113,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
