@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'articles.apps.ArticlesConfig',
+    'rest_framework',
+    'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.staticfiles',
 ]

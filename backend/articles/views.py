@@ -1,7 +1,15 @@
 from django.shortcuts import render, HttpResponse
-from .models import Article
+from articles.models import Article
+from articles.serializers import ArticleSerializer
+
+from rest_framework import generics
 
 # Create your views here.
 
-def index(request):
-    return HttpResponse("Hello World!")
+class ArticlesList(generics.ListCreateAPIView):
+    queryset = Article.objects.all()
+    serializer_class = ArticleSerializer
+
+class ArticleDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Article.objects.all()
+    serializer_class = ArticleSerializer
