@@ -9,7 +9,7 @@ $(document).ready(function(){
   chrome.runtime.sendMessage({
     title: headline,
     author: author,
-    publishtime: time,
-    content: body
+    date: time,
+    content: body.substring(0, Math.min(5000, body.length))
   });
 });
